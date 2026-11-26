@@ -1,0 +1,183 @@
+/* Paleta de Cores Oficial WEG */
+:root {
+    --weg-blue: #00579D;       /* Azul Principal WEG */
+    --weg-dark-blue: #003366;  /* Azul Marinho Institucional */
+    --weg-light-blue: #E6F0F8; /* Azul Suave para destaques */
+    --weg-accent: #0088CC;     /* Ciano Industrial */
+    --bg-gray: #F4F6F9;        /* Fundo Cinza Claro Técnico */
+    --text-dark: #1F2937;      /* Texto Principal */
+    --text-muted: #4B5563;     /* Texto Secundário */
+    --white: #FFFFFF;
+    --border-color: #D1D5DB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-gray);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho */
+.header-weg {
+    background: linear-gradient(135deg, var(--weg-dark-blue) 0%, var(--weg-blue) 100%);
+    color: var(--white);
+    padding: 48px 0;
+    border-bottom: 5px solid var(--weg-accent);
+    margin-bottom: 32px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.header-weg h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Cards de Conteúdo */
+.card {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--border-color);
+}
+
+.context-card {
+    border-left: 6px solid var(--weg-blue);
+}
+
+.card h2 {
+    color: var(--weg-dark-blue);
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--weg-light-blue);
+}
+
+.card p {
+    margin-bottom: 16px;
+    color: var(--text-muted);
+}
+
+/* Grid de Informações do CentroWEG */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+    background-color: var(--weg-light-blue);
+    padding: 16px;
+    border-radius: 6px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-item strong {
+    color: var(--weg-dark-blue);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.info-item span {
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Lista de Funções */
+.functions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.func-box {
+    padding: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #FAFAFA;
+    transition: border-color 0.2s ease;
+}
+
+.func-box:hover {
+    border-color: var(--weg-blue);
+}
+
+.func-box h3 {
+    color: var(--weg-blue);
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+.func-box p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+/* Formatação de Código */
+code {
+    background-color: var(--weg-light-blue);
+    color: var(--weg-dark-blue);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+pre {
+    background-color: var(--weg-dark-blue);
+    color: var(--white);
+    padding: 18px;
+    border-radius: 6px;
+    overflow-x: auto;
+}
+
+pre code {
+    background-color: transparent;
+    color: #E2E8F0;
+    padding: 0;
+    font-size: 0.95rem;
+}
+
+/* Rodapé */
+.footer-weg {
+    background-color: var(--weg-dark-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 24px 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}

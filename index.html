@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Cadastro de Motores - Python | CentroWEG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header-weg">
+        <div class="container">
+            <span class="badge">Desenvolvimento de Sistemas • SENAI</span>
+            <h1>Sistema de Cadastro de Motores em Python</h1>
+            <p class="subtitle">Documentação técnica do algoritmo monolítico para gestão de ativos industriais em memória.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- Seção de Contexto / Localização -->
+        <section class="card context-card">
+            <h2>Sobre o Projeto e Local de Desenvolvimento</h2>
+            <p>
+                Este projeto foi desenvolvido durante as atividades práticas do curso técnico do <strong>SENAI</strong>, 
+                realizado dentro do <strong>CentroWEG</strong>, unidade educacional integrada ao parque fabril da 
+                <strong>WEG</strong> em <strong>Jaraguá do Sul - SC</strong>.
+            </p>
+            <div class="info-grid">
+                <div class="info-item">
+                    <strong>Instituição:</strong>
+                    <span>SENAI / CentroWEG</span>
+                </div>
+                <div class="info-item">
+                    <strong>Localização:</strong>
+                    <span>Jaraguá do Sul, Santa Catarina</span>
+                </div>
+                <div class="info-item">
+                    <strong>Linguagem:</strong>
+                    <span>Python 3 (Paradigma Procedural)</span>
+                </div>
+                <div class="info-item">
+                    <strong>Armazenamento:</strong>
+                    <span>Listas e Dicionários (Em memória)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Explicação da Arquitetura -->
+        <section class="card">
+            <h2>Arquitetura e Funcionamento do Código</h2>
+            <p>
+                O programa foi estruturado de forma monolítica (em um único arquivo <code>.py</code>) com foco em lógica de programação, 
+                manipulação de estruturas de dados nativas e operações básicas de sistema (CRUD).
+            </p>
+
+            <div class="functions-list">
+                <div class="func-box">
+                    <h3><code>motores = []</code> (Array Global)</h3>
+                    <p>Funciona como o banco de dados temporário. Armazena dicionários onde cada chave representa uma especificação técnica de placa do motor (Código, Marca, Modelo, Potência em CV, RPM e Tensão).</p>
+                </div>
+
+                <div class="func-box">
+                    <h3><code>cadastrar_motor()</code></h3>
+                    <p>Captura os dados via terminal, valida se o código já existe para evitar duplicidade e converte valores numéricos (<code>float</code> para CV e <code>int</code> para RPM) com tratamento de exceções (<code>try/except</code>).</p>
+                </div>
+
+                <div class="func-box">
+                    <h3><code>listar_motores()</code> & <code>buscar_motor()</code></h3>
+                    <p>Percorre o array exibindo todos os registros formatados ou filtra resultados utilizando <em>List Comprehension</em> por código ou fabricante.</p>
+                </div>
+
+                <div class="func-box">
+                    <h3><code>atualizar_motor()</code> & <code>remover_motor()</code></h3>
+                    <p>Permite editar atributos específicos mantendo os valores atuais caso o usuário pressione Enter em branco, ou excluir um motor da lista pelo índice usando o método <code>.pop()</code>.</p>
+                </div>
+
+                <div class="func-box">
+                    <h3><code>menu()</code> (Loop Principal)</h3>
+                    <p>Controla o fluxo de execução através de um laço <code>while True</code>, mantendo o programa ativo até que o usuário escolha a opção de encerramento.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bloco de Código de Exemplo -->
+        <section class="card">
+            <h2>Trecho da Estrutura de Dados Utilizada</h2>
+            <p>Abaixo está a representação de como cada motor é modelado dentro da lista em Python:</p>
+            <pre><code>motores = [
+    {
+        "codigo": "M001",
+        "marca": "WEG",
+        "modelo": "W22",
+        "potencia_cv": 10.0,
+        "rpm": 1750,
+        "tensao": "220V/380V"
+    }
+]</code></pre>
+        </section>
+
+    </main>
+
+    <footer class="footer-weg">
+        <div class="container">
+            <p>Projeto Educacional • Desenvolvido no <strong>CentroWEG (SENAI)</strong> - Jaraguá do Sul, SC</p>
+        </div>
+    </footer>
+
+</body>
+</html>
